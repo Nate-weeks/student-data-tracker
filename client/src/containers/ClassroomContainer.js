@@ -12,7 +12,7 @@ class ClassroomContainer extends Component {
 
   componentDidMount() {
     let classroom_id = this.props.match.params["classroom_id"]
-    fetch(`/api/v1/classrooms/${classroom_id}`, {
+    fetch(`http://localhost:3000/api/v1/classrooms/${classroom_id}`, {
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
