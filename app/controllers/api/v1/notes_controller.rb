@@ -1,7 +1,6 @@
 class Api::V1::NotesController < ApplicationController
 
   def create
-    binding.pry
     @classroom = Classroom.find(params['classroom_id'])
     @students = @classroom.students
     note = Note.new

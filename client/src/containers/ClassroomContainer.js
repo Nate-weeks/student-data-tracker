@@ -56,7 +56,7 @@ class ClassroomContainer extends Component {
       body: JSON.stringify({student: formPayload})
     })
     .then(response => response.json())
-    .then(body => {console.log(body)
+    .then(body => {
       this.setState({
         students: body,
       })
@@ -75,7 +75,7 @@ class ClassroomContainer extends Component {
       body: JSON.stringify({attendance: formPayload})
     })
     .then(response => response.json())
-    .then(body => {console.log(body)
+    .then(body => {
       this.setState({
         students: body,
       })
@@ -94,7 +94,7 @@ class ClassroomContainer extends Component {
       body: JSON.stringify({note: formPayload})
     })
     .then(response => response.json())
-    .then(body => {console.log(body)
+    .then(body => {
       this.setState({
         students: body,
       })
