@@ -19,10 +19,10 @@ students = Student.create([
   ])
 
 notes = Note.create([
-  {title: "poor behavior", note: "student1 was physically violent toward student 2 at 10am today", student_id: 1},
-  {title: "good b ehavior", note: "student1 was great today!", student_id: 1}
+  {date: "Tue Apr 24 2018 00:00:00 GMT-0400 (EDT)", title: "poor behavior", note: "student1 was physically violent toward student 2 at 10am today", student_id: 1},
+  {date: "Tue Apr 24 2018 00:00:00 GMT-0400 (EDT)", title: "good b ehavior", note: "student1 was great today!", student_id: 1}
   ])
 
 daily_attendances = DailyAttendance.create([
-  {date: "1999-01-08", attendance: "tardy", student_id: 1}
+  {date: "Tue Apr 24 2018 00:00:00 GMT-0400 (EDT)", attendance: "tardy", student_id: 1}
   ])

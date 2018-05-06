@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :classrooms
+      resources :classrooms do
+        resources :students
+        resources :daily_attendances
+        resources :notes
+      end
     end
+  end
+    get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
   end
 end

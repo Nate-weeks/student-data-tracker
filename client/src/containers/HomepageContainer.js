@@ -26,7 +26,7 @@ class HomepageContainer extends Component {
       })
       .then(response => response.json())
       .then(body => {
-        this.setState({classroomArray: body.classrooms})
+        this.setState({classroomArray: body})
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }

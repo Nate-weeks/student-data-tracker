@@ -16,32 +16,33 @@ ActiveRecord::Schema.define(version: 20180410195745) do
   enable_extension "plpgsql"
 
   create_table "classrooms", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "daily_attendances", force: :cascade do |t|
-    t.date "date"
-    t.string "attendance"
-    t.bigint "student_id"
+    t.date "date", null: false
+    t.string "attendance", null: false
+    t.bigint "student_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["student_id"], name: "index_daily_attendances_on_student_id"
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string "note"
+    t.string "note", null: false
     t.string "title"
-    t.bigint "student_id"
+    t.date "date", null: false
+    t.bigint "student_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["student_id"], name: "index_notes_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "name"
-    t.bigint "classroom_id"
+    t.string "name", null: false
+    t.bigint "classroom_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["classroom_id"], name: "index_students_on_classroom_id"
