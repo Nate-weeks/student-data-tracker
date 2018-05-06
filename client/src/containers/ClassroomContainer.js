@@ -19,7 +19,7 @@ class ClassroomContainer extends Component {
 
   componentDidMount() {
     let classroom_id = this.props.match.params["classroom_id"]
-    fetch(`http://localhost:3000/api/v1/classrooms/${classroom_id}`,{
+    fetch(`/api/v1/classrooms/${classroom_id}`,{
       credentials: 'same-origin',
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
@@ -46,7 +46,7 @@ class ClassroomContainer extends Component {
 
   addNewStudent(formPayload){
     let classroom_id = this.props.match.params["classroom_id"]
-    fetch(`http://localhost:3000/api/v1/classrooms/${classroom_id}`,{
+    fetch(`/api/v1/classrooms/${classroom_id}`,{
       credentials: 'same-origin',
       headers: {
         'Accept': 'application/json',
@@ -65,7 +65,7 @@ class ClassroomContainer extends Component {
 
   createDailyAttendance(formPayload){
     let classroom_id = this.props.match.params["classroom_id"]
-    fetch(`http://localhost:3000/api/v1/classrooms/${classroom_id}/daily_attendances`,{
+    fetch(`/api/v1/classrooms/${classroom_id}/daily_attendances`,{
       credentials: 'same-origin',
       headers: {
         'Accept': 'application/json',
@@ -84,7 +84,7 @@ class ClassroomContainer extends Component {
 
   createNote(formPayload){
     let classroom_id = this.props.match.params["classroom_id"]
-    fetch(`http://localhost:3000/api/v1/classrooms/${classroom_id}/notes`,{
+    fetch(`/api/v1/classrooms/${classroom_id}/notes`,{
       credentials: 'same-origin',
       headers: {
         'Accept': 'application/json',
